@@ -1,10 +1,22 @@
+
+@font-face
+{
+font-family: 'Helvetica Neue';
+src: url('HelveticaNeue.ttf'),
+     url('HelveticaNeue.eot'); /* IE9 */
+}
+
+
 body{
-   margin:0;
+   margin:auto;
    background:#CCD1D1;
+/*   background:white;*/
    font-family:arial;
 } 
 
-#container{
+
+#page-container{
+   position:relative;
    background:white;
 /*   width:90%; */
 /*   width:1200px;*/
@@ -12,7 +24,13 @@ body{
    margin-left:auto;
    margin-right:auto;
    border-radius:10px;
+   min-height:100vh;
 }
+
+#container{
+   padding-bottom:2.5rem;
+}
+
 
 header{
    border-radius:10px;
@@ -49,15 +67,16 @@ header h1{
    font-family:"verdana";
    margin:0;
    display:inline;
-   padding:0px 10px 0px 5px;
+   padding:0px 40px 0px 40px;
 }
 
 h2{
    font-family:"verdana";
    margin:10;
    display:block;
-   padding: 0px 10px 0px 10px;
+   padding: 0px 40px 0px 40px;
 }
+
 
 h3{
    font-family:"verdana";
@@ -66,11 +85,25 @@ h3{
    padding: 0px 0px 0px 0px;
 }
 
+.inline{
+   font-family:"verdana";
+   margin:10;
+   display:block;
+   padding: 0px 40px 0px 40px;
+}
+
+h4{
+   font-family:"verdana";
+   margin:10;
+   display:block;
+   padding: 0px 40px 0px 40px;
+}
+
 
 p {
     font-family:"verdana", Geneva, Arial, Helvetica, sans-serif;
     padding: 0px 40px 0px 40px;
-    line-height: 1.3;
+    line-height: 22pt;
 }
 
 nav ul{
@@ -86,8 +119,14 @@ nav ul li{
    list-style-type:none;
    padding: 5px 15px;
    border-radius:5px;
-   width:15%;
+   width:10%;
    text-align:center;
+}
+
+ul.mystyle{
+   font-family:"verdana", Geneva, Arial, Helvetica, sans-serif;
+   margin:20px;
+   line-height:22pt;
 }
 
 nav ul li a{
@@ -103,19 +142,25 @@ nav ul li a{
    float:left;
    background:none; /*#444;*/
    margin: 0.5%;
+   margin-bottom:10px;
    width:46%;
    border-radius: 15px;
    padding: 10px 10px;/*.5%;*/
    color:#252525;/*white;*/
-   font-family:"verdana", Geneva, Arial, Helvetica, sans-serif;
+   font-family:"verdana", verdana, Geneva, Arial, Helvetica, sans-serif;
    line-height: 22pt;
+   text-align:justify;
 }
 
 
 footer{
+   position:absolute;
+   bottom:0;
    clear: both;
    text-align:right;
-   padding:5px;
+   padding:0px;
+   height: 2.5rem;            /* Footer height */
+   width:100%;
 }
 
 a{
@@ -143,8 +188,4 @@ th {
   border-bottom: 2px solid #3690c0;
 }
 
-/*tr:nth-child(even) {
-#  background-color: #dddddd;
-}
-*/
 
