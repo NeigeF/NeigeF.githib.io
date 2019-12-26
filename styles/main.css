@@ -9,8 +9,8 @@ src: url('HelveticaNeue.ttf'),
 
 body{
    margin:auto;
-   background:#CCD1D1;
-/*   background:white;*/
+/*   background:#CCD1D1;*/
+   background:white;
    font-family:arial;
 } 
 
@@ -31,6 +31,25 @@ body{
    padding-bottom:2.5rem;
 }
 
+
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 0%;
+    width:87%;
+    height:400px;
+    background-color: transparent;
+}
+
+.resp-iframe {
+    position: relative;
+    top: 0;
+    left: -40%;
+    width: 180%;
+    height: 100%;
+    border: 0;
+    background-color: transparent;
+}
 
 header{
    border-radius:10px;
