@@ -24,26 +24,105 @@
         <div id="page-container">
         <div id="container" style=text-align:justify;>
 
-`
-
-
            <h2> What is radial migration?</h2>
 
 	   <p>
-	   In the Milky Way and similar disk galaxies, the disk stars rotate about the Galactic center.
-	   But they are subject to various perturbations, that modifies their orbits. These 
-	   perturbations can have different nature and different effects: stars orbits can become
-	   eccentric, or kinematically heated, due to some resonances or scatter events with
-	   giant molecular clouds. Other processes make stars change Galactocentric radius, but 
-	   without much heating. The effect is often called 'radial migration'.	   
-	   Non-axissymmetric perturbations can redistribute stars over large distances. As Noether's
-	   theorem says: to a particular symmetry in a system is associated a quantity that is conserved.
-	   If the system is axissymmetric, then angular momentum should be conserved. But in disk galaxies,
-	   there are non axissymmetries, like spiral arms, or a bar, etc. These are over densities of stars
-	   and gas and dust, that contribute significantly to the potential of the disk. 
-	   These non axissymmetries exert torques on the stars. And the stars change angular momenta.
+	   Radial migration is one of the processes involved in the long term dynamical evolution
+	   (secular evolution) of disk galaxies near isolation, like the Milky Way. These processes
+	   can mostly be separated in two families: one `heats' stellar orbits, by increasing their
+	   eccentricity. The other changes the orbit size, or the angular momentum, without much heating.
+	   These two effects lead stars to be, today, on different orbits and at different radii than
+	   those on which they were born. The first process, heating or `blurring' 
+	   <a href="https://ui.adsabs.harvard.edu/abs/2002MNRAS.336..785S/abstract">
+           (Sellwood & Binney, 2002)</a> can arise through scattering and interaction with spiral arms, 
+	   a bar, or giant molecular clouds. 
+	   Perturbations have a stronger net effect when they occur several times, 
+	   and at the same place in the same direction: then the effects add up. 
+	   These happen over resonances. The second process (change in angular momentum but not
+	   eccentricity), dubbed `churning' by Sellwood and Binney, was proposed to arise specifically
+	   at the corotation resonance between stars and non-axisymmetries (this is one 'candidate' process
+	   for this, but not necessarily the only one). 
+	   </p>
+
+           <p>
+           The animation below illustrates what the co-rotation resonance does 
+	   in a simple Milky Way-like disk. A star initially on a near-circular orbit in a potential 
+	   with a roughly flat circular veolicity curve, but that is not axisymmetric: it has spiral 
+	   perturbations that rotate like a solid body with a constant pattern speed $\Omega_p$. 
+	   The star is initially orbiting very close to co-rotation, the place where
+	   it has the same speed as the arms. But it is pulled by the spiral arms. When a spiral
+	   arm is behind the star, it applies a negative torque on the star: 
+	   $\mathcal{T} = \frac{dL_z}{dt}$. So $\frac{dL_z}{dt} \leq 0$, so the star loses angular momentum and
+           its orbit size decreases and goes inside the co-rotation radius. 
+	   It then rotates faster than the arms and catches up the one
+	   in front of it. As they get close, the arm before the star exerts a positive
+           gravitational torque. The star gains angular momentum and its orbit size increaes, outside the
+	   co-rotation radius. The star then rotates slower than spiral arms and gets caught up by the one behind, etc.. In the
+	   co-rotating frame, this looks like a 'horseshoe orbit', where the stars stays trapped in between
+	   these two arms.
            </p>
 
+           <p>
+           <video width=100% height=100% autoplay loop>
+                   <source src = "videos/migration_resonances3.mp4"
+                           type="video/mp4">
+           </video>
+           </p>
+         <p style="font-size: 12px;">
+         This animation was done in Python, using the packages Numpy, Matplotlib and Galpy 
+	 <a href="https://ui.adsabs.harvard.edu/abs/2015ApJS..216...29B/abstract">(Bovy 2015).</a>
+	 Credit: Neige Frankel
+        </p>
+
+
+	<p>
+	But this is not the end of the story. If this were the only process, stars would just stay trapped
+	at these co-rotation resonances, and stars would not undergo radial migration over the entire disk.
+        If now, the spiral arms do not live forever, the perturbations described above will be 
+	<b>transient perturbations</b>, and the stars will  <b> 'surf the spiral waves'</b> for some time
+	until they vanish. If these perturbations appear and disappear on short time-scales, the stars
+	will then do a random walk in angular momentum. This is radial migration. 
+	Of course, this is a simplified story. There is a lot of work showing that this is much more complex:
+	the bar, resonance overlap, maybe fly-by of satellites (etc.) have non-linear effects that affect this
+	process. But it is still interesting to look at what happens for stars scattered by a series of 
+	transient spiral arms, and is the focus of the next animation:
+	</p>
+
+	<p> put the animation </p>
+
+	<p>
+	Over this process, stars, which rotate about the Galactic center with a rotation speed $\Omega$, 
+	keep approximately circular orbits, but can change angular momentum by large amounts. 
+	This is specific to the co-rotation resonance. In this set up, the Jacobi integral $E_J$ is conserved:
+        $E_J = E - \Omega_p L_z$ 
+	<a href="https://ui.adsabs.harvard.edu/abs/2002MNRAS.336..785S/abstract">
+           (e.g., Sellwood & Binney, 2002)</a>.
+	Decomposing the motion into 'radial motion', quantified by the 'radial action' $J_R$ 
+	and 'rotation', quantified by the azimuthal action ($\approx$ angular momentum), this integral leads to
+	to changes of radial action and angular momentum related by
+        $$\Delta J_R = \frac{\Omega_p - \Omega}{\kappa} \Delta L_z.$$ 
+        We see that at co-rotation,
+        i.e. where $\Omega = \Omega_p$, the changes of radial action $\Delta J_R$ are zero even though
+        the changes of angular momentum $\Delta L_z$ can be large.
+	</p>
+
+	<h4> How strong is it in the Milky Way? </h4>
+
+	<p>
+        In terms of migration distance, the stars are thought to migrate on scales of about 
+	$3.5 \mathrm{kpc}\sqrt{\frac{\tau}{8~\mathrm{Gyr}}}$
+	<a href="https://ui.adsabs.harvard.edu/abs/2018ApJ...865...96F/abstract">
+		see Frankel, Rix, Ting, Ness, Hogg (2018)</a>.
+        And most of this migration seems to be dominated by diffusion of angular momentum, rather than heating
+	and increase of eccentricity (soon to come).
+	</p>
+
+
+        <h4> Where to find more about radial migration </h4>
+	<p>Here is a non-exhaustive list of references that can be useful to start with: [todo]</p>
+
+
+	   <!--
 	   <p>
            Perturbations have a stronger net effect when they occur several times, and at
 	   the same place in the same direction: then the effects add up. These happen over resonances.
@@ -57,31 +136,8 @@
 	   the changes of angular momentum $\Delta L_z$ can be large: the non-axissymmetries exert
 	   gravitational torques on the stars $\mathcal{T} = \frac{\mathrm{d}L_z}{\mathrm{d}t}$ causing
 	   angular momentum changes.
-           </p>
-
-	   <p>
-	   The animation below illustrates this effect in a simple disk: a star initially on a near-
-	   circular orbit, very close to co-rotation, is pulled by the spiral arms. When the spiral
-	   arm is behind the star, it applies a negative torque. So the star loses angular momentum and
-	   its orbit size decreases. It then starts to rotate faster than the arms, at catches up the other
-	   arm in front of it. As they get close, the arm before the star exerts a positive
-	   gravitational torque. The star gains angular momentum and its orbit size increaes.
-	   </p>
-	   <p>
-
-           <video width=100% height=100% autoplay loop>
-                   <source src = "videos/migration_resonances3.mp4"
-                           type="video/mp4">
-           </video>
-	   </p>
-         <p>
-	 This animation was done using the Galpy Package <a href="https://ui.adsabs.harvard.edu/abs/2015ApJS..216...29B/abstract">(Bovy 2015)</a>
-        </p>
-	
-
-
-
-
+           </p> 
+	   -->
 
 
         <p>&nbsp;</p>
