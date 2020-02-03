@@ -64,7 +64,7 @@
 
            <p>
            <video width=100% height=100% autoplay loop>
-                   <source src = "videos/migration_resonances3.mp4"
+                   <source src = "videos/migration_resonances_2020-02-02_1.mp4"
                            type="video/mp4">
            </video>
            </p>
@@ -85,15 +85,34 @@
 	Of course, this is a simplified story. There is a lot of work showing that this is much more complex:
 	the bar, resonance overlap, maybe fly-by of satellites (etc.) have non-linear effects that affect this
 	process. But it is still interesting to look at what happens for stars scattered by a series of 
-	transient spiral arms, and is the focus of the next animation:
+	transient spiral arms, and is the focus of the next animation:</br>
+	Here it shows a set of stars born on a circular orbit, at the same Galactocentric radius (or angular momentum)
+	as they meet spiral perturbations (denoted by the background: dark = there is a spiral perturbation,
+	white = there is no spiral perturbation). We see that stars that were originally born with the same
+	angular momentum drift apart from each other. In the end, they occupy a wide range of angular momenta
+	centered on their birth angular momentum.
 	</p>
 
-	<p> put the animation </p>
+         <p>
+         <video width=100% height=100% autoplay loop>
+             <source src = "videos/2020-02-02_migr_many11.mp4"
+                     type="video/mp4">
+        </video>
+        </p>
+         <p style="font-size: 12px;">
+         This animation was done in Python, using the packages Numpy, Matplotlib and Galpy
+         <a href="https://ui.adsabs.harvard.edu/abs/2015ApJS..216...29B/abstract">(Bovy 2015).</a>
+         Credit: Neige Frankel
+        </p>	
+
 
 	<p>
 	Over this process, stars, which rotate about the Galactic center with a rotation speed $\Omega$, 
 	keep approximately circular orbits, but can change angular momentum by large amounts. 
-	This is specific to the co-rotation resonance. In this set up, the Jacobi integral $E_J$ is conserved:
+	This is specific to the co-rotation resonance. In this set up, the system is time-varying and
+	non axisymmetric. So neither energy or angular momentum is conserved. However, in the 
+	co-rotating frame (frame that rotates with the system at $\Omega_P$, the system always look the same.
+	There is an associated conserved quantity, the Jacobi integral $E_J$:
         $E_J = E - \Omega_p L_z$ 
 	<a href="https://ui.adsabs.harvard.edu/abs/2002MNRAS.336..785S/abstract">
            (e.g., Sellwood & Binney, 2002)</a>.
@@ -103,18 +122,28 @@
         $$\Delta J_R = \frac{\Omega_p - \Omega}{\kappa} \Delta L_z.$$ 
         We see that at co-rotation,
         i.e. where $\Omega = \Omega_p$, the changes of radial action $\Delta J_R$ are zero even though
-        the changes of angular momentum $\Delta L_z$ can be large.
+        the changes of angular momentum $\Delta L_z$ can be large. It was shown in several simulations
+	if isolated disk galaxies that these changes of angular momentum can be very large
+	<a href="https://ui.adsabs.harvard.edu/abs/2013A%26A...558A...9M/abstract">
+           (e.g., Minchev et al., 2013)</a>. But how about our galaxy, the Milky Way?
 	</p>
 
-	<h4> How strong is it in the Milky Way? </h4>
+	<h4> How strong is radial migration in the Milky Way? </h4>
 
 	<p>
         In terms of migration distance, the stars are thought to migrate on scales of about 
 	$3.5 \mathrm{kpc}\sqrt{\frac{\tau}{8~\mathrm{Gyr}}}$
 	<a href="https://ui.adsabs.harvard.edu/abs/2018ApJ...865...96F/abstract">
 		see Frankel, Rix, Ting, Ness, Hogg (2018)</a>.
-        And most of this migration seems to be dominated by diffusion of angular momentum, rather than heating
-	and increase of eccentricity (soon to come).
+	This is based on measures of scatter in the metallicity [Fe/H]-age-Galactocentric radius relation, and on the 
+	assumption that at birth of stars, there is no scatter at all: the gas from which stars formed is well mixed. Since
+	we cannot directly know where a star was born by looking at it, not find its whole trajectory throughout
+	its life, we use the fact that stars retain chemical memory of their birth conditions: the elemental abundances
+	in their atmosphere reflects those of the gas from which they were born. So we can then tag stars back to their
+	birth Galactocentric radius. Then, one can do the same exercise using angular momentum instead of radius, with
+	phase-space ifnormation from the Gaia space mission. It turns out that 
+        most of this migration seems to be dominated by diffusion of angular momentum, rather than heating
+	and increase of eccentricity.
 	</p>
 
 
