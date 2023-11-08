@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
-        <title> neige frankel</title>   
+        <title> neige frankel</title>
         <link href="styles/main.css" rel="stylesheet" type="text/css"/>
    </head>
 
@@ -25,149 +25,170 @@
         <div id="page-container">
         <div id="container" style=text-align:justify;>
 
-           <h2> What is radial migration?</h2>
+           <h2> What is this Gaia Snail, or Gaia Phase Spiral?</h2>
 
 	   <p>
-	   Radial migration is one of the processes involved in the long term dynamical evolution
-	   (secular evolution) of disk galaxies near isolation, like the Milky Way. These processes
-	   can mostly be separated in two families: one `heats' stellar orbits, by increasing their
-	   eccentricity. The other changes the orbit size, or the angular momentum, without much heating.
-	   These two effects lead stars to be, today, on different orbits and at different radii than
-	   those on which they were born. The first process, heating or `blurring' 
-	   <a href="https://ui.adsabs.harvard.edu/abs/2002MNRAS.336..785S/abstract">
-           (Sellwood & Binney, 2002)</a> can arise through scattering and interaction with spiral arms, 
-	   a bar, or giant molecular clouds. 
-	   Perturbations have a stronger net effect when they occur several times, 
-	   and at the same place in the same direction: then the effects add up. 
-	   These happen over resonances. The second process (change in angular momentum but not
-	   eccentricity), dubbed `churning' by Sellwood and Binney, was proposed to arise specifically
-	   at the corotation resonance between stars and non-axisymmetries (this is one 'candidate' process
-	   for this, but not necessarily the only one). 
-	   </p>
+     The Gaia Phase Spiral, or Gaia Snail, is this beautiful-looking spiral feature discovered
+     in Gaia DR2 data by T. Antoja (ICCUB), in the plane of Galactic height (i.e. position perpendicular
+     to the midplane of the Galactic disk) - vertical velocity (the motion perpendicular to the disk).
+     It is illustrated below with data from Gaia DR3. The color coding shows the density contrast, i.e.
+     the fractional difference of stars on different orbits and phases. Redder regions mean that there are
+     more stars than average in these regions of phase space.
+     </p>
+
+     <center>
+     <img src="images/snail.png"style="margin-left:0px; width:440px"/>
+   </center>
+
+     <p>
+     It is called the Gaia phase space spiral, shortenned into Gaia phase spiral. That name is quite long and
+     cannot be shortned to simply 'spiral' because spiral already means something else (the spirals we see in
+     pictures of galaxies). So an even shorter name that described what it looks like: the Gaia Snail.
+
+     Its existence shows that stars in our Galactic disk occupy preferentially some phases of their orbits
+     than others. This is surprising if we think that stars are usually born right into the midplane of the
+     Galactic disk no (or small) vertical motion, and as time goes they get random kicks up and down
+     and acquire random vertical motion: if it all random, there should be no preffered orbital phase.
+     So how did the stars end-up in a phase spiral?
+     </p>
+
+
+     <h4> Showcase with the Classical Pendulum</h4>
+
+          <p>
+          The pendulum is often used as an example to derive the harmonic oscillator equations. There are
+          several ways of getting there, and one of them consists in doing a Taylor expansion of the potential $V(\theta)$ to
+          second order. In particular,  we write the energy of a pendulum of length $L$ and with the gravitational acceleration at the
+          surface of the Earth $g$ as
+          $$E = \frac{L^2\dot{\theta}^2}{2} - gL \cos(\theta) + \mathrm{const.}$$
+          where $\theta$ is the angle of the pendulum with respect to the vertical axis, and $ \dot{\theta} $ is its time derivative, the
+          angular velocity. This is the simple sum of the kinetic and potential energy. But it leads to equations of motions that
+          cannot be solved analytically. So when the amplitudes are small, i.e. $\theta << 1$, we can expand this expression around 0 as
+          $$E \approx \frac{L^2\dot{\theta}^2}{2} - gL (1 - \frac{1}{2}\theta^2) + \mathrm{const.}$$
+          And when you solve the equation of motion that you get from this, you get the harmonic oscillator solution, at any time $t$ and dropping
+          the pendulum for an angle $\theta_\mathrm{max}$:
+          $$\theta(t) = \theta_{max} \cos(\Omega  t)$$
+          with $\Omega = \sqrt{\frac{g}{L}}$.
+          This equation shows that when the pendulum deviation is small, the pendulum period (or frequency) is always the same. It is
+          independent of its energy (and
+          this is what we call 'harmonic' motion: there is a unique frequency). But this is only valid at small amplitudes.
+          In fact, the general solution, that works at larger amplitudes too, is anharmonic, i.e. the pendulum period increases with the amplitude (or energy).
+          You can think of the limiting case where you leave the pendulum right at $\theta=\pi$, i.e. vertical, just above its pivot.
+          It will slowly start to fall down, pass the point $\theta=0$ rapidly, but then take an infinite amount of time to come back up to its
+          initial point!
+          </p>
 
            <p>
-           The animation below illustrates what the co-rotation resonance does 
-	   in a simple Milky Way-like disk. A star initially on a near-circular orbit in a potential 
-	   with a roughly flat circular veolicity curve, but that is not axisymmetric: it has spiral 
-	   perturbations that rotate like a solid body with a constant pattern speed $\Omega_p$. 
-	   The star is initially orbiting very close to co-rotation, the place where
-	   it has the same speed as the arms. But it is pulled by the spiral arms. When a spiral
-	   arm is behind the star, it applies a negative torque on the star: 
-	   $\mathcal{T} = \frac{dL_z}{dt}$. So $\frac{dL_z}{dt} \leq 0$, so the star loses angular momentum and
-           its orbit size decreases and goes inside the co-rotation radius. 
-	   It then rotates faster than the arms and catches up the one
-	   in front of it. As they get close, the arm before the star exerts a positive
-           gravitational torque. The star gains angular momentum and its orbit size increaes, outside the
-	   co-rotation radius. The star then rotates slower than spiral arms and gets caught up by the one behind, etc.. In the
-	   co-rotating frame, this looks like a 'horseshoe orbit', where the stars stays trapped in between
-	   these two arms.
+           The animation below illustrates a hundred pendula. The left panels shows t                                                                                                                                     hem as they swing in
+           physical space and the right panel shows them on their phase space (angle versus angular velocity).
+           In this animation, the pendula's energies (their colors: low energy in blue, high energy in yellow)
+           are randomly distributed, and so is their phase. There is nothing special to notice about that plot, except that due to
+           their anharmonicity at larger amplitudes (or energies), the yellow pendula have a longer period.
+           They take longer to go over their swing. If the pendula were stars in the Galactic disk, we would say
+           that they are currently at equilibrium and phase-mixed.
            </p>
 
            <p>
            <video width=100% height=100% autoplay loop>
-                   <source src = "videos/migration_resonances_2020-02-02_1.mp4"
+                   <source src = "videos/pendulum_no_kick.mp4"
                            type="video/mp4">
            </video>
            </p>
          <p style="font-size: 12px;">
-         This animation was done in Python, using the packages Numpy, Matplotlib and Galpy 
-	 <a href="https://ui.adsabs.harvard.edu/abs/2015ApJS..216...29B/abstract">(Bovy 2015).</a>
+         This animation was done in Python, using the packages Numpy and Matplotlib.
 	 Credit: Neige Frankel
         </p>
 
 
 	<p>
-	But this is not the end of the story. If this were the only process, stars would just stay trapped
-	at these co-rotation resonances, and stars would not undergo radial migration over the entire disk.
-        If now, the spiral arms do not live forever, the perturbations described above will be 
-	<b>transient perturbations</b>, and the stars will  <b> 'surf the spiral waves'</b> for some time
-	until they vanish. If these perturbations appear and disappear on short time-scales, the stars
-	will then do a random walk in angular momentum. This is radial migration. 
-        <b>The challenge for us, observers, is that we do not have an inventory for all the previous spiral perturbations that formed and decayed in the real Milky Way! 
-	So we cannot directly reconstruct all the dynamical processes that influenced the stars.</b>
-	Of course, this is a simplified story. There is a lot of work showing that this is much more complex:
-	the bar, resonance overlap, maybe fly-by of satellites (etc.) have non-linear effects that affect this
-	process. But it is still interesting to look at what happens for stars scattered by a series of 
-	transient spiral arms, and is the focus of the next animation:</br>
-	Here it shows a set of stars born on a circular orbit, at the same Galactocentric radius (or angular momentum)
-	as they meet spiral perturbations (denoted by the background: dark = there is a spiral perturbation,
-	white = there is no spiral perturbation). We see that stars that were originally born with the same
-	angular momentum drift apart from each other. In the end, they occupy a wide range of angular momenta
-	centered on their birth angular momentum.
+  Now, what happens if we suddenly decide to kick all the pendula to the right? On average, just as we kick them, their
+  average net motion is going to be to the right. So overall, they will tend to be on a specific phase of their orbit
+  (swinging to the right!). Since the motion is anharmonic, i.e. pendula with higher amplitudes have longer periods, the
+  higher amplitude pendula are going to start to lag behind the others in the phase space plane. And if you wait for long
+  enough, a spiral pattern that winds up with time is going to form. The animation below illustrates exactly this effect.
+  After enough time, the system becomes sufficiently phase mixed and the spiral disappears.
+  So: pendula, when kicked, can make a Snail-looking pattern, due to their anharmonic motion. That's some good insight
+  we can use for the Milky Way pattern!
 	</p>
 
          <p>
          <video width=100% height=100% autoplay loop>
-             <source src = "videos/2020-02-02_migr_many11.mp4"
+             <source src = "videos/pendlum_kick.mp4"
                      type="video/mp4">
         </video>
         </p>
          <p style="font-size: 12px;">
-         This animation was done in Python, using the packages Numpy, Matplotlib and Galpy
-         <a href="https://ui.adsabs.harvard.edu/abs/2015ApJS..216...29B/abstract">(Bovy 2015).</a>
+         This animation was done in Python, using the packages Numpy and Matplotlib.
          Credit: Neige Frankel
-        </p>	
+        </p>
 
+
+  <h4>Orbits in our Galactic disk </h4>
+
+  <p>
+  In the Milky Way, we can think in a similar way about the vertical orbits of the stars. Replace the pendula by stars in the
+  example above, and replace the net force on the pendula (gravitational force from the Earth and the tension from the rope) by
+  the gravitational field in the Milky Way. Since in the Milky Way disk, the distribution of matter is not uniform, the
+  gravitational potential is not harmonic (mass distribution and gravitational potential as related via Poisson's equation for
+  the reference, but this is beyond the scope of this post).
+  </p>
+
+  <p>
+  If the stars in the Milky Way disk got kicked, then the perturbation phase-mixes and ends up in a Snail. The animation below
+  shows the vertical phase space plane (heights above the Milky Way disk versus vertical velocity) for a set of stars that got
+  perturbed by a positive velocity kick at $t = 0$. The stars have a range of energies (as for the pendula example), and as
+  time goes the perturbation winds up in a spiral pattern. But what produced the kick?
+  </p>
+
+
+
+  <p>
+  <center>
+  <video width=50% height=50% padding=25% autoplay loop>
+      <source src = "videos/snail_anim.mp4"
+              type="video/mp4">
+ </video>
+</center>
+ </p>
+  <p style="font-size: 12px;">
+  This animation was done in Python, using the packages Numpy, Matplotlib and Galpy.
+  Credit: Neige Frankel
+ </p>
+
+
+	<h4> What has perturbed our Galaxy? A few theories. </h4>
 
 	<p>
-	Over this process, stars, which rotate about the Galactic center with a rotation speed $\Omega$, 
-	keep approximately circular orbits, but can change angular momentum by large amounts. 
-	This is specific to the co-rotation resonance. In this set up, the system is time-varying and
-	non axisymmetric. So neither energy or angular momentum is conserved. However, in the 
-	co-rotating frame (frame that rotates with the system at $\Omega_P$, the system always look the same.
-	There is an associated conserved quantity, the Jacobi integral $E_J$:
-        $E_J = E - \Omega_p L_z$ 
-	<a href="https://ui.adsabs.harvard.edu/abs/2002MNRAS.336..785S/abstract">
-           (e.g., Sellwood & Binney, 2002)</a>.
-	Decomposing the motion into 'radial motion', quantified by the 'radial action' $J_R$ 
-	and 'rotation', quantified by the azimuthal action ($\approx$ angular momentum), this integral leads to
-	to changes of radial action and angular momentum related by
-        $$\Delta J_R = \frac{\Omega_p - \Omega}{\kappa} \Delta L_z.$$ 
-        We see that at co-rotation,
-        i.e. where $\Omega = \Omega_p$, the changes of radial action $\Delta J_R$ are zero even though
-        the changes of angular momentum $\Delta L_z$ can be large. It was shown in several simulations
-	if isolated disk galaxies that these changes of angular momentum can be very large
-	<a href="https://ui.adsabs.harvard.edu/abs/2013A%26A...558A...9M/abstract">
-           (e.g., Minchev et al., 2013)</a>. But how about our galaxy, the Milky Way?
-	</p>
+  Plenty of scenarios could have resulted in a Gaia Snail-looking structure. As detailed above,
+  under some assumptions, the degree of winding of the Snail can tell something about the time
+  when the perturbation happenned. Various works have estimated that time to be between 200 Myr
+  and 800 Myr (for example 	<a href="https://ui.adsabs.harvard.edu/abs/2023MNRAS.521.5917F/abstract">
+  Frankel et al. (2023)</a> and references therein).
+  This time window coincides with when the Sagittarius dwarf galaxy, currently orbiting
+  the Milky Way, came and crossed the Milky Way disk. This could well have kicked the stars in
+  a similar way as in the animation above. However, there are issues with this scenario: it seems
+  that the Sagittarius dwarf galaxy may not be massive enough to produce a signal as strong as what
+  we see in the data, and the timing is actually not very well defined: looking at stars that are
+  at different places of the galaxy gives different answers.
+  </p>
 
-	<h4> How strong is radial migration in the Milky Way? </h4>
+  <p>
+  Additionally, other dynamical effects could come in and make that signal harder to interpret. For example,
+  self-gravity (once all the stars got kicked, their mass distribution changes, and so does the gravitational
+  potential that they create and that determines their motion). This could affect the measurement of the timing
+  of that event, especially if it is recent! (e.g. Widrow, 2023)
+  </p>
 
-	<p>
-        In terms of migration distance, the stars are thought to migrate on scales of about 
-	$3.5 \mathrm{kpc}\sqrt{\frac{\tau}{8~\mathrm{Gyr}}}$
-	<a href="https://ui.adsabs.harvard.edu/abs/2018ApJ...865...96F/abstract">
-		see Frankel, Rix, Ting, Ness, Hogg (2018)</a>.
-	This is based on measures of scatter in the metallicity [Fe/H]-age-Galactocentric radius relation, and on the 
-	assumption that at birth of stars, there is no scatter at all: the gas from which stars formed is well mixed. Since
-	we cannot directly know where a star was born by looking at it, not find its whole trajectory throughout
-	its life, we use the fact that stars retain chemical memory of their birth conditions: the elemental abundances
-	in their atmosphere reflects those of the gas from which they were born. So we can then tag stars back to their
-	birth Galactocentric radius. Then, one can do the same exercise using angular momentum instead of radius, with
-	phase-space ifnormation from the Gaia space mission. It turns out that 
-        most of this migration seems to be dominated by diffusion of angular momentum, rather than heating
-	and increase of eccentricity. See <a href="https://ui.adsabs.harvard.edu/abs/2020arXiv200204622F/abstract">
-        Frankel, Sanders, Ting, Rix (2020)</a> for the details (and of course there are plenty of other studies on this,
-        see references therein).
-	</p>
+  <p>
+  What if there were more than one event? We know there are other satellite galaxies orbiting the Milky Way.
+  If you take the extreme scenario where there are MANY of them, perturbing the disk ALL the time, then you can
+  still get a similar-looking snail! And this time, the degree of winding will have nothing to do with
+  a specific date of a specific traumatic event: it reflects a competition between two effects: the perturbations
+  that come in, and how quickly they "disappear", i.e. how quickly the Galactic disk forgets about it due to
+  perturbations from other things, like giant molecular clouds etc. (<a href="https://ui.adsabs.harvard.edu/abs/2023MNRAS.521..114T/abstract">
+  see  e.g., Tremaine, Frankel, and Bovy 2023</a>)
+  </p>
 
-
-	   <!--
-	   <p>
-           Perturbations have a stronger net effect when they occur several times, and at
-	   the same place in the same direction: then the effects add up. These happen over resonances.
-	   As first postulated by <a href="https://ui.adsabs.harvard.edu/abs/2002MNRAS.336..785S/abstract">
-           Sellwood & Binney(2002)</a>, in a simple system composed of a disk and spiral arms that
-           rotate as solid bodies with a rotation speed $\Omega_p$, the Jacobi integral is conserved:
-	   $E_J = E - \Omega_p L_z, $ which leads to changes of radial action and angular momentum as
-	   $$\Delta J_R = \frac{\Omega_p - \Omega}{\kappa} \Delta L_z.$$ 
-	   We see that at co-rotation,
-	   i.e. where $\Omega = \Omega_p$, the changes of radial action $\Delta J_R$ are zero even though
-	   the changes of angular momentum $\Delta L_z$ can be large: the non-axissymmetries exert
-	   gravitational torques on the stars $\mathcal{T} = \frac{\mathrm{d}L_z}{\mathrm{d}t}$ causing
-	   angular momentum changes.
-           </p> 
-	   -->
 
 
         <p>&nbsp;</p>
@@ -203,5 +224,3 @@
     <!-- End of mathjax configuration -->
 
 </html>
-
-

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
-        <title> neige frankel</title>   
+        <title> neige frankel</title>
         <link href="styles/main.css" rel="stylesheet" type="text/css"/>
    </head>
 
@@ -33,28 +33,28 @@
 	   can mostly be separated in two families: one `heats' stellar orbits, by increasing their
 	   eccentricity. The other changes the orbit size, or the angular momentum, without much heating.
 	   These two effects lead stars to be, today, on different orbits and at different radii than
-	   those on which they were born. The first process, heating or `blurring' 
+	   those on which they were born. The first process, heating or `blurring'
 	   <a href="https://ui.adsabs.harvard.edu/abs/2002MNRAS.336..785S/abstract">
-           (Sellwood & Binney, 2002)</a> can arise through scattering and interaction with spiral arms, 
-	   a bar, or giant molecular clouds. 
-	   Perturbations have a stronger net effect when they occur several times, 
-	   and at the same place in the same direction: then the effects add up. 
+           (Sellwood & Binney, 2002)</a> can arise through scattering and interaction with spiral arms,
+	   a bar, or giant molecular clouds.
+	   Perturbations have a stronger net effect when they occur several times,
+	   and at the same place in the same direction: then the effects add up.
 	   These happen over resonances. The second process (change in angular momentum but not
 	   eccentricity), dubbed `churning' by Sellwood and Binney, was proposed to arise specifically
 	   at the corotation resonance between stars and non-axisymmetries (this is one 'candidate' process
-	   for this, but not necessarily the only one). 
+	   for this, but not necessarily the only one).
 	   </p>
 
            <p>
-           The animation below illustrates what the co-rotation resonance does 
-	   in a simple Milky Way-like disk. A star initially on a near-circular orbit in a potential 
-	   with a roughly flat circular veolicity curve, but that is not axisymmetric: it has spiral 
-	   perturbations that rotate like a solid body with a constant pattern speed $\Omega_p$. 
+           The animation below illustrates what the co-rotation resonance does
+	   in a simple Milky Way-like disk. A star initially on a near-circular orbit in a potential
+	   with a roughly flat circular veolicity curve, but that is not axisymmetric: it has spiral
+	   perturbations that rotate like a solid body with a constant pattern speed $\Omega_p$.
 	   The star is initially orbiting very close to co-rotation, the place where
 	   it has the same speed as the arms. But it is pulled by the spiral arms. When a spiral
-	   arm is behind the star, it applies a negative torque on the star: 
+	   arm is behind the star, it applies a negative torque on the star:
 	   $\mathcal{T} = \frac{dL_z}{dt}$. So $\frac{dL_z}{dt} \leq 0$, so the star loses angular momentum and
-           its orbit size decreases and goes inside the co-rotation radius. 
+           its orbit size decreases and goes inside the co-rotation radius.
 	   It then rotates faster than the arms and catches up the one
 	   in front of it. As they get close, the arm before the star exerts a positive
            gravitational torque. The star gains angular momentum and its orbit size increaes, outside the
@@ -65,29 +65,28 @@
 
            <p>
            <video width=100% height=100% autoplay loop>
-                   <source src = "videos/migration_resonances_2020-02-02_1.mp4"
+                   <source src = "videos/migration_resonances_corotation_2020-07-07.mp4"
                            type="video/mp4">
            </video>
            </p>
          <p style="font-size: 12px;">
-         This animation was done in Python, using the packages Numpy, Matplotlib and Galpy 
+         This animation was done in Python, using the packages Numpy, Matplotlib and Galpy
 	 <a href="https://ui.adsabs.harvard.edu/abs/2015ApJS..216...29B/abstract">(Bovy 2015).</a>
 	 Credit: Neige Frankel
         </p>
 
-
 	<p>
 	But this is not the end of the story. If this were the only process, stars would just stay trapped
 	at these co-rotation resonances, and stars would not undergo radial migration over the entire disk.
-        If now, the spiral arms do not live forever, the perturbations described above will be 
+        If now, the spiral arms do not live forever, the perturbations described above will be
 	<b>transient perturbations</b>, and the stars will  <b> 'surf the spiral waves'</b> for some time
 	until they vanish. If these perturbations appear and disappear on short time-scales, the stars
-	will then do a random walk in angular momentum. This is radial migration. 
-        <b>The challenge for us, observers, is that we do not have an inventory for all the previous spiral perturbations that formed and decayed in the real Milky Way! 
+	will then do a random walk in angular momentum. This is radial migration.
+        <b>The challenge for us, observers, is that we do not have an inventory for all the previous spiral perturbations that formed and decayed in the real Milky Way!
 	So we cannot directly reconstruct all the dynamical processes that influenced the stars.</b>
 	Of course, this is a simplified story. There is a lot of work showing that this is much more complex:
 	the bar, resonance overlap, maybe fly-by of satellites (etc.) have non-linear effects that affect this
-	process. But it is still interesting to look at what happens for stars scattered by a series of 
+	process. But it is still interesting to look at what happens for stars scattered by a series of
 	transient spiral arms, and is the focus of the next animation:</br>
 	Here it shows a set of stars born on a circular orbit, at the same Galactocentric radius (or angular momentum)
 	as they meet spiral perturbations (denoted by the background: dark = there is a spiral perturbation,
@@ -106,23 +105,23 @@
          This animation was done in Python, using the packages Numpy, Matplotlib and Galpy
          <a href="https://ui.adsabs.harvard.edu/abs/2015ApJS..216...29B/abstract">(Bovy 2015).</a>
          Credit: Neige Frankel
-        </p>	
+        </p>
 
 
 	<p>
-	Over this process, stars, which rotate about the Galactic center with a rotation speed $\Omega$, 
-	keep approximately circular orbits, but can change angular momentum by large amounts. 
+	Over this process, stars, which rotate about the Galactic center with a rotation speed $\Omega$,
+	keep approximately circular orbits, but can change angular momentum by large amounts.
 	This is specific to the co-rotation resonance. In this set up, the system is time-varying and
-	non axisymmetric. So neither energy or angular momentum is conserved. However, in the 
+	non axisymmetric. So neither energy or angular momentum is conserved. However, in the
 	co-rotating frame (frame that rotates with the system at $\Omega_P$, the system always look the same.
 	There is an associated conserved quantity, the Jacobi integral $E_J$:
-        $E_J = E - \Omega_p L_z$ 
+        $E_J = E - \Omega_p L_z$
 	<a href="https://ui.adsabs.harvard.edu/abs/2002MNRAS.336..785S/abstract">
            (e.g., Sellwood & Binney, 2002)</a>.
-	Decomposing the motion into 'radial motion', quantified by the 'radial action' $J_R$ 
+	Decomposing the motion into 'radial motion', quantified by the 'radial action' $J_R$
 	and 'rotation', quantified by the azimuthal action ($\approx$ angular momentum), this integral leads to
 	to changes of radial action and angular momentum related by
-        $$\Delta J_R = \frac{\Omega_p - \Omega}{\kappa} \Delta L_z.$$ 
+        $$\Delta J_R = \frac{\Omega_p - \Omega}{\kappa} \Delta L_z.$$
         We see that at co-rotation,
         i.e. where $\Omega = \Omega_p$, the changes of radial action $\Delta J_R$ are zero even though
         the changes of angular momentum $\Delta L_z$ can be large. It was shown in several simulations
@@ -134,17 +133,17 @@
 	<h4> How strong is radial migration in the Milky Way? </h4>
 
 	<p>
-        In terms of migration distance, the stars are thought to migrate on scales of about 
+        In terms of migration distance, the stars are thought to migrate on scales of about
 	$3.5 \mathrm{kpc}\sqrt{\frac{\tau}{8~\mathrm{Gyr}}}$
 	<a href="https://ui.adsabs.harvard.edu/abs/2018ApJ...865...96F/abstract">
 		see Frankel, Rix, Ting, Ness, Hogg (2018)</a>.
-	This is based on measures of scatter in the metallicity [Fe/H]-age-Galactocentric radius relation, and on the 
+	This is based on measures of scatter in the metallicity [Fe/H]-age-Galactocentric radius relation, and on the
 	assumption that at birth of stars, there is no scatter at all: the gas from which stars formed is well mixed. Since
 	we cannot directly know where a star was born by looking at it, not find its whole trajectory throughout
 	its life, we use the fact that stars retain chemical memory of their birth conditions: the elemental abundances
 	in their atmosphere reflects those of the gas from which they were born. So we can then tag stars back to their
 	birth Galactocentric radius. Then, one can do the same exercise using angular momentum instead of radius, with
-	phase-space ifnormation from the Gaia space mission. It turns out that 
+	phase-space ifnormation from the Gaia space mission. It turns out that
         most of this migration seems to be dominated by diffusion of angular momentum, rather than heating
 	and increase of eccentricity. See <a href="https://ui.adsabs.harvard.edu/abs/2020arXiv200204622F/abstract">
         Frankel, Sanders, Ting, Rix (2020)</a> for the details (and of course there are plenty of other studies on this,
@@ -160,13 +159,13 @@
            Sellwood & Binney(2002)</a>, in a simple system composed of a disk and spiral arms that
            rotate as solid bodies with a rotation speed $\Omega_p$, the Jacobi integral is conserved:
 	   $E_J = E - \Omega_p L_z, $ which leads to changes of radial action and angular momentum as
-	   $$\Delta J_R = \frac{\Omega_p - \Omega}{\kappa} \Delta L_z.$$ 
+	   $$\Delta J_R = \frac{\Omega_p - \Omega}{\kappa} \Delta L_z.$$
 	   We see that at co-rotation,
 	   i.e. where $\Omega = \Omega_p$, the changes of radial action $\Delta J_R$ are zero even though
 	   the changes of angular momentum $\Delta L_z$ can be large: the non-axissymmetries exert
 	   gravitational torques on the stars $\mathcal{T} = \frac{\mathrm{d}L_z}{\mathrm{d}t}$ causing
 	   angular momentum changes.
-           </p> 
+           </p>
 	   -->
 
 
@@ -203,5 +202,3 @@
     <!-- End of mathjax configuration -->
 
 </html>
-
-
